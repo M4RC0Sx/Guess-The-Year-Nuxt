@@ -28,5 +28,12 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["@typescript-eslint", "vue"],
-  rules: {},
+  rules: {
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
+  },
 };
