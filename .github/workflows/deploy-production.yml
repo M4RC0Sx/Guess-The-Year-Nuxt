@@ -1,4 +1,4 @@
-name: Check format and run tests
+name: Deploy to production (Vercel)
 
 on:
   push:
