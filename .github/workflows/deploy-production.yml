@@ -1,5 +1,8 @@
 name: Deploy to production (Vercel)
 
+env:
+  NITRO_PRESET: vercel
+
 on:
   push:
     branches: [master]
