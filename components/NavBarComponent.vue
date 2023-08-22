@@ -6,14 +6,7 @@
       class="flex flex-auto items-center justify-between mx-auto p-4 max-w-4xl"
     >
       <ul class="flex items-center list-none">
-        <a class="dark:text-gray-200" @click="darkMode = !darkMode">
-          <IconMoon
-            v-if="darkMode"
-            class="w-6 h-6"
-            :font-controlled="false"
-          ></IconMoon>
-          <IconSun v-else class="w-6 h-6" :font-controlled="false"></IconSun>
-        </a>
+        <ThemeSwitcherComponent />
       </ul>
       <ul class="flex items-center list-none dark:text-gray-200">
         <NuxtLink class="md:text-5xl text-xl font-bold" to="/"
@@ -34,24 +27,4 @@
 
 <script setup lang="ts">
 import IconGitHub from "~/assets/img/icons/github.svg";
-import IconSun from "~/assets/img/icons/sun.svg";
-import IconMoon from "~/assets/img/icons/moon.svg";
-
-type Theme = "light" | "dark";
-const LOCAL_STORAGE_THEME_KEY = "theme";
-
-const darkMode = useState("theme", () => false);
-
-const setTheme = (theme: Theme) => {
-  localStorage.setItem(LOCAL_STORAGE_THEME_KEY, theme);
-  if (theme === "dark") {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
-};
-
-watch(darkMode, (value) => {
-  setTheme(value ? "dark" : "light");
-});
 </script>
