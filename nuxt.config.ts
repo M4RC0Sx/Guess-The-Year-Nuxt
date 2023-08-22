@@ -11,5 +11,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@formkit/nuxt", "nuxt-svgo"],
+  modules: ["@formkit/nuxt", "nuxt-svgo", "@vueuse/nuxt"],
 });
