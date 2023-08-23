@@ -1,14 +1,10 @@
 <template>
-  <div class="relative flex flex-col">
-    <main class="flex flex-col grow">
-      <NavBarComponent />
-      <ul>
-        <li><NuxtLink to="/">Index</NuxtLink></li>
-        <li><NuxtLink to="/game">Game</NuxtLink></li>
-      </ul>
-      <div>
+  <div class="min-h-screen bg-gray-200 dark:bg-gray-700">
+    <div class="relative flex flex-col">
+      <main class="flex flex-col grow">
+        <NavBarComponent />
         <slot />
-      </div>
-    </main>
+      </main>
+    </div>
   </div>
 </template>
