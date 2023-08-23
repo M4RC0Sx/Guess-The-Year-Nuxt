@@ -34,6 +34,7 @@
   "dependencies": {
     "@formkit/icons": "^0.18.3",
     "@formkit/nuxt": "^0.18.3",
-    "@formkit/themes": "^0.18.3"
+    "@formkit/themes": "^0.18.3",
+    "vue-github-button": "^3.1.0"
   }
 }
