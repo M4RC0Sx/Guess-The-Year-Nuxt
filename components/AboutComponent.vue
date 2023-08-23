@@ -88,8 +88,12 @@
     >
       <div class="py-4">
         <p>
-          This project is based on https://guess-the-year.davjhan.com/ and has
-          been made with the aim of taking the first steps with Vue.js and Nuxt.
+          This project is based on
+          <a href="https://guess-the-year.davjhan.com/"
+            >https://guess-the-year.davjhan.com/</a
+          >
+          and has been made with the aim of taking the first steps with Vue.js
+          and Nuxt.
         </p>
         <br />
         <p>
