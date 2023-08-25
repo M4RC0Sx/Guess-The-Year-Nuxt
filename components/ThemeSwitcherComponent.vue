@@ -11,8 +11,8 @@
 <script setup lang="ts">
 import { useDark, useToggle } from "@vueuse/core";
 
-import IconSun from "~/assets/img/icons/sun.svg";
-import IconMoon from "~/assets/img/icons/moon.svg";
+import IconSun from "~/assets/icons/sun.svg";
+import IconMoon from "~/assets/icons/moon.svg";
 
 const darkMode = useDark();
 const toggleDarkMode = useToggle(darkMode);
