@@ -26,5 +26,5 @@
 </template>
 
 <script setup lang="ts">
-import IconGitHub from "~/assets/img/icons/github.svg";
+import IconGitHub from "~/assets/icons/github.svg";
 </script>
