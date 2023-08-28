@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex space-x-4 py-4 mx-2 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600 mb-8"
+    class="flex space-x-4 py-4 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600 mb-8"
   >
     <div
       class="flex flex-auto items-center justify-between mx-auto p-4 max-w-4xl"
