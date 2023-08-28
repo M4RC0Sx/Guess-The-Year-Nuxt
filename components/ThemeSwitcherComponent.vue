@@ -1,5 +1,8 @@
 <template>
-  <a class="dark:text-gray-200 cursor-pointer" @click="toggleDarkMode()">
+  <a
+    class="dark:text-gray-200 cursor-pointer border-transparent border-solid border-2 hover:border-slate-300 rounded p-1"
+    @click="toggleDarkMode()"
+  >
     <IconMoon
       class="w-6 h-6 dark:block hidden"
       :font-controlled="false"
