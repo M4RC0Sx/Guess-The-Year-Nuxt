@@ -26,3 +26,5 @@ logs
 package.json
 .prettierrc.json
 main.css
+
+questions.json
