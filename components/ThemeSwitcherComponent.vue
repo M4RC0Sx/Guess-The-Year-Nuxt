@@ -1,6 +1,6 @@
 <template>
   <a
-    class="dark:text-gray-200 cursor-pointer border-transparent border-solid border-2 hover:border-slate-300 rounded p-1"
+    class="dark:text-gray-200 cursor-pointer border-transparent border-solid border-2 hover:border-slate-300 p-1 rounded"
     @click="toggleDarkMode()"
   >
     <IconMoon
