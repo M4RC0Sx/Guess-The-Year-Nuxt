@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-200 dark:bg-gray-700">
+  <div class="min-h-screen bg-theme2 dark:bg-dark-theme3">
     <div class="relative flex flex-col">
       <main class="flex flex-col grow">
         <NavBarComponent />

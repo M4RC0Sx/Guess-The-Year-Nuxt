@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex space-x-4 py-4 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600 mb-8"
+    class="flex space-x-4 py-4 bg-theme3 dark:bg-dark-theme4 border-b border-gray-200 dark:border-gray-600 mb-8"
   >
     <div
       class="flex flex-auto items-center justify-between mx-auto p-4 max-w-4xl"
@@ -9,7 +9,7 @@
         <ThemeSwitcherComponent />
       </ul>
       <ul class="flex items-center list-none dark:text-gray-200">
-        <NuxtLink class="md:text-5xl text-xl font-bold" to="/"
+        <NuxtLink class="md:text-5xl text-xl font-bold font-roboto" to="/"
           >Guess The Year</NuxtLink
         >
       </ul>

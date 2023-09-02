@@ -3,18 +3,18 @@
     <div class="flex flex-row w-full justify-center">
       <div class="flex flex-row grow max-w-xl justify-between">
         <div
-          class="bg-gray-300 dark:bg-gray-600 px-8 py-4 sm:mx-0 mx-4 rounded-md"
+          class="bg-theme4 border-4 dark:bg-dark-theme2 px-8 py-4 sm:mx-0 mx-4 rounded-md"
         >
-          <span>Score: {{ score }}</span>
+          <span class="font-roboto font-semibold">Score: {{ score }}</span>
         </div>
         <div
-          class="bg-gray-300 dark:bg-gray-600 px-8 py-4 sm:mx-0 mx-4 rounded-md"
+          class="bg-theme4 border-4 dark:bg-dark-theme2 px-8 py-4 sm:mx-0 mx-4 rounded-md"
         >
-          <span>Lives: {{ lives }}</span>
+          <span class="font-roboto font-semibold">Lives: {{ lives }}</span>
         </div>
       </div>
     </div>
-    <div v-if="gameStatus === GameStatus.STARTED">
+    <div v-if="gameStatus === GameStatus.STARTED" class="mt-4">
       <QuestionComponent
         v-if="!answered"
         :question="questions[questionIndex]"
@@ -31,10 +31,28 @@
         "
       />
     </div>
-    <div v-else>
-      <h1>Game finished with {{ score }} score!</h1>
+    <div
+      v-else
+      class="flex flex-col justify-center items-center bg-theme4 dark:bg-dark-theme2 p-4 rounded-md mt-5"
+    >
+      <div v-if="gameStatus === GameStatus.LOST">
+        <h1 class="text-center font-semibold text-3xl font-roboto">
+          You lost!
+        </h1>
+        <h2 class="text-center font-medium text-2xl font-roboto">
+          Game finished with {{ score }} score!
+        </h2>
+      </div>
+      <div v-else>
+        <h1 class="text-center font-semibold text-3xl font-roboto">
+          Congratulations! You won!
+        </h1>
+        <h2 class="text-center font-medium text-2xl font-roboto">
+          Game finished with {{ score }} score!
+        </h2>
+      </div>
       <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded mb-4"
+        class="mt-5 bg-dark-theme1 hover:bg-dark-theme2 dark:hover:bg-dark-theme3 text-white font-bold py-2 px-4 border border-dark-theme4 rounded mb-4"
       >
         <NuxtLink to="/">Return to home</NuxtLink>
       </button>
@@ -76,6 +94,12 @@ watch(lives, (value) => {
   if (value <= 0) {
     lives.value = 0;
     gameStatus.value = GameStatus.LOST;
+  }
+});
+
+watch(questionIndex, (value) => {
+  if (value >= questions.length) {
+    gameStatus.value = GameStatus.WON;
   }
 });
 </script>
